@@ -273,14 +273,14 @@ public class GovData {
         
         String[] asTemp = sAllText.split("\\r\\n");
         
-        int iLength = asTemp.length;
+        int iLength = asTemp.length - 1;
         
         
         String[][] aasData = new String[iLength][iSingleLength];
         
         for (int i = 0; i < iLength; i++)
         {
-            aasData[i] = asTemp[i].split(",");
+            aasData[i] = asTemp[i + 1].split(",");
         }
         
         return aasData;
